@@ -21,7 +21,7 @@ class _PricePageState extends State<PricePage> {
             selectedIndex = index;
           });
           index == 0 ? Navigator.push(
-              context, MaterialPageRoute(builder: (context) => PricePage())) : LandingPage();
+              context, MaterialPageRoute(builder: (context) => LandingPage())) : PricePage();
         },
         child: Column(
           mainAxisSize: MainAxisSize.min,
