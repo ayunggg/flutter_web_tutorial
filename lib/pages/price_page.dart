@@ -28,23 +28,29 @@ class _PricePageState extends State<PricePage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              title,
-              style: GoogleFonts.poppins(
-                  fontSize: 18,
-                  color: Color(0xFF1D1E3C),
-                  fontWeight: index == selectedIndex
-                      ? FontWeight.w500
-                      : FontWeight.w300),
+            FittedBox(
+              fit: BoxFit.fill,
+              child: Text(
+                title,
+                style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    color: Color(0xFF1D1E3C),
+                    fontWeight: index == selectedIndex
+                        ? FontWeight.w500
+                        : FontWeight.w300),
+              ),
             ),
-            Container(
-              width: 50,
-              height: 2,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: index == selectedIndex
-                    ? Color(0xFFFE998D)
-                    : Colors.transparent,
+            FittedBox(
+              fit: BoxFit.fill,
+              child: Container(
+                width: 50,
+                height: 2,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: index == selectedIndex
+                      ? Color(0xFFFE998D)
+                      : Colors.transparent,
+                ),
               ),
             )
           ],
@@ -55,11 +61,14 @@ class _PricePageState extends State<PricePage> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(
-            'images/background.png',
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
+          FittedBox(
             fit: BoxFit.fill,
+            child: Image.asset(
+              'images/background.png',
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.fill,
+            ),
           ),
           Column(
             children: [
@@ -84,10 +93,12 @@ class _PricePageState extends State<PricePage> {
                     title: 'Stories',
                     index: 3,
                   ),
-                  Image.asset(
-                    'images/btn.png',
-                    fit: BoxFit.fill,
-                    width: 163,
+                  FittedBox(
+                    fit: BoxFit.cover,
+                    child: Image.asset(
+                      'images/btn.png',
+                      width: 163,
+                    ),
                   ),
                   // ignore: prefer_const_constructors
                   SizedBox(
@@ -100,7 +111,7 @@ class _PricePageState extends State<PricePage> {
               ),
               Image.asset(
                 'images/price.png',
-                width: 550,
+                width: 542,
                 fit: BoxFit.fill,
               ),
               Text('Hit The Button Below',
