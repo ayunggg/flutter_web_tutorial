@@ -20,8 +20,10 @@ class _PricePageState extends State<PricePage> {
           setState(() {
             selectedIndex = index;
           });
-          index == 0 ? Navigator.push(
-              context, MaterialPageRoute(builder: (context) => LandingPage())) : PricePage();
+          index == 0
+              ? Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LandingPage()))
+              : PricePage();
         },
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -100,6 +102,14 @@ class _PricePageState extends State<PricePage> {
                 'images/price.png',
                 width: 550,
                 fit: BoxFit.fill,
+              ),
+              Text('Hit The Button Below',
+              style: GoogleFonts.poppins(
+                fontSize: 18,
+                fontWeight: FontWeight.w800,
+                color: Colors.black
+              ),
+              
               )
             ],
           ),
