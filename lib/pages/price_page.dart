@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'landing_page.dart';
+
 class PricePage extends StatefulWidget {
   @override
   State<PricePage> createState() => _PricePageState();
@@ -18,6 +20,8 @@ class _PricePageState extends State<PricePage> {
           setState(() {
             selectedIndex = index;
           });
+          index == 0 ? Navigator.push(
+              context, MaterialPageRoute(builder: (context) => PricePage())) : LandingPage();
         },
         child: Column(
           mainAxisSize: MainAxisSize.min,

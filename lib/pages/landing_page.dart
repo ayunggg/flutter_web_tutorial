@@ -19,8 +19,8 @@ class _LandingPageState extends State<LandingPage> {
           setState(() {
             selectedIndex = index;
           });
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => PricePage()));
+          index == 1 ? Navigator.push(
+              context, MaterialPageRoute(builder: (context) => PricePage())) : LandingPage();
         },
         child: Column(
           mainAxisSize: MainAxisSize.min,
