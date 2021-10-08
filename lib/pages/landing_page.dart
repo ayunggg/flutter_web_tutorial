@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, unused_import, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_web/pages/price_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LandingPage extends StatefulWidget {
@@ -18,6 +19,8 @@ class _LandingPageState extends State<LandingPage> {
           setState(() {
             selectedIndex = index;
           });
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => PricePage()));
         },
         child: Column(
           mainAxisSize: MainAxisSize.min,
